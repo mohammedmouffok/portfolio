@@ -19,15 +19,15 @@ import CssBaseline from "@mui/material/CssBaseline";
 // });
 // use the default theme customasation to switch mode
 const primary = {
-  main: "#1976d2",
-  light: "#42a5f5",
+  main: "#000",
+  shadow: "#fff1df",
   dark: "#1565c0",
-  contrastText: "#fff",
+  textColor: "#fff",
 };
 const secondary = {
-  main: "#1976d2",
-  light: "#42a5f5",
-  dark: "#1565c0",
+  main: "#000",
+  light: "#505050",
+  borderHover: "#1565c0",
   contrastText: "#fff",
 };
 

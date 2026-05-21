@@ -2,20 +2,18 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
+
 export default function Hero() {
   return (
     <section
       id="Home"
-      className="min-h-screen flex items-center justify-center px-6 py-20"
+      className=" bg-black min-h-screen flex bg-[linear-gradient(to_right,#80808012_3px,transparent_2px),linear-gradient(to_bottom,#80808012_3px,transparent_1px)] bg-size-[40px_50px]  items-center justify-center px-6 py-20"
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-6">
-          <div className="w-32 h-32 bg-linear-to-br from-primary to-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+          <div className="w-32 h-32 from-primary to-muted rounded-full mx-auto mb-6 flex items-center justify-center">
             <Stack>
-              <Avatar
-                sx={{ width: 110, height: 110 }}
-                className="shadow-xl shadow-[#fff1df] transition-shadow "
-              >
+              <Avatar sx={{ width: 110, height: 110 }}>
                 <Typography variant="h3">M</Typography>
               </Avatar>
             </Stack>

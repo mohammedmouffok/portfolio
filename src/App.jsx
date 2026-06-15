@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import NavBar from "./component/NavBar";
-import Footer from "./component/Footer";
+// import Footer from "./component/Footer";
 import About from "./component/About";
 import Projects from "./component/Projects";
 import Skills from "./component/Skills";

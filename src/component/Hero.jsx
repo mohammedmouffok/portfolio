@@ -21,7 +21,10 @@ export default function Hero() {
             <a href="https://www.ensttic.dz" target="_blank" className="font-bold text-indigo-400 hover:underline underline-offset-2">
               ENSTTIC
             </a>{" "}
-            passonate about building scalable website
+            passonate about building scalable website.My key skills include Web Development and Datacom, where I focus on creating reliable and high-performing systems.
+
+
+            
           </p>
         </div>
         <div>

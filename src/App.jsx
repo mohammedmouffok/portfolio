@@ -1,6 +1,7 @@
 import "./App.css";
+import { useEffect } from "react";
+import 'aos/dist/aos.css'
 import AOS from 'aos'
-
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import About from "./component/About";
@@ -20,6 +21,10 @@ const theme = createTheme({
 ///////////////////////////////////////::
 
 function App() {
+    useEffect(() => {
+      // Initialize AOS
+      AOS.init();
+    }, []);
   return (
     <div className="items-center">
       <ThemeProvider theme={theme}>
@@ -28,7 +33,7 @@ function App() {
         <Hero />
         <Skills /> 
         <About />
-        {/* <Projects /> */}
+        <Projects />
         {/* <Contact/> */}
         {/* <Footer /> */}
       </ThemeProvider>

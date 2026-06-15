@@ -72,11 +72,11 @@ const iconsList = [
 
 export default function MatrialCards() {
   return (
-    <div className="grid grid-cols-4 gap-8 h-12 ">
+    <div  className="grid grid-cols-4 gap-8 h-12 ">
       {iconsList.map((i) => {
         const Icons = iconMap[i.icon];
         return (
-          <div className="flex items-center justify-center p-6  hover:-translate-y-1 transition-all duration-300 hover:shadow-lg shadow-sky-300 bg-gradient-to-b from-[#252525] rounded-2xl  outline-2 outline-offset-4 outline-neutral-600 ">
+          <div data-aos="fade-up"  className="flex items-center justify-center p-6  hover:-translate-y-1 transition-all duration-300 hover:shadow-lg shadow-sky-300 bg-gradient-to-b from-[#252525] rounded-2xl  outline-2 outline-offset-4 outline-neutral-600 ">
             <a
               key={i.id}
               href={i.href}

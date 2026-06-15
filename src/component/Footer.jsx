@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-[#616161]">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Mohammed MOUFFOK. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a

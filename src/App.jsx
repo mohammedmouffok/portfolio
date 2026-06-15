@@ -1,4 +1,6 @@
 import "./App.css";
+import AOS from 'aos'
+
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import About from "./component/About";
@@ -9,53 +11,26 @@ import Hero from "./component/Hero";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
-// const darkTheme = createTheme({
-//   palette: {
-//     mode: "dark",
-//     primary: {
-//       main: "#ff5252",
-//     },
-//   },
-// });
-// use the default theme customasation to switch mode
-const primary = {
-  main: "#000",
-  shadow: "#fff1df",
-  dark: "#1565c0",
-  textColor: "#fff",
-};
-const secondary = {
-  main: "#000",
-  light: "#505050",
-  borderHover: "#1565c0",
-  contrastText: "#fff",
-};
-
-//////////////////////////////////::
-
-
 const theme = createTheme({
-  palette: {
-    primary: primary,
-    secondary: secondary,
+  typography: {
+    fontFamily: ["Poppins"],
   },
 });
-
 
 ///////////////////////////////////////::
 
 function App() {
   return (
-    <div className="items-center ">
+    <div className="items-center">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <NavBar />
         <Hero />
+        <Skills /> 
         <About />
-        <Projects />
-        <Skills />
+        {/* <Projects /> */}
         {/* <Contact/> */}
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </div>
   );

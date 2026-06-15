@@ -1,50 +1,54 @@
 import { useState } from "react";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeFilledIcon from "@mui/icons-material/HomeFilled";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const navLinks = [
-  { href: "#Home", label: "Home" },
   { href: "#Projects", label: "Projects" },
   { href: "#About", label: "About" },
+  { href: "#Contact", label: "Contact" },
 ];
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div className="fixed top-4 left-0 w-full flex justify-center z-50">
-      <div className="w-[92%] max-w-6xl bg-black border border-white/20 rounded-full px-6 py-3 shadow-lg shadow-[#fff1df] transition-shadow">
+    <nav className="fixed top-4 left-0 w-full flex justify-center z-1200">
+      <div className="w-[50vw] px-6 py-3 ">
         {/* Desktop Nav */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center gap-4 ">
           {/* Logo */}
-          <div className="flex ">
+          <div className="flex w-[50px] h-[50px] items-center justify-center rounded-full bg-gray-100/30 backdrop-blur-md border border-black/20">
             <a key="Home" href="#Home">
-              <Stack>
-                <Avatar className="cursor-pointer">M</Avatar>
-              </Stack>
+              <HomeFilledIcon />
             </a>
-            <h1 className="text-black font-bold text-lg tracking-wide px-1 m-1">
-              Mohammed
-            </h1>
           </div>
 
           {/* Links  */}
           {/* I'll remove the contact section now ! , "Contact" */}
-          <ul className="hidden md:flex gap-8 text-black font-medium">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className=" text-black relative cursor-pointer group"
-              >
-                {link.label}
+          <div className="gap-12 bg-gray-100/30 h-[50px]  flex flex-2 items-center justify-center pr-6 pl-6 ml-2 mr-2 backdrop-blur-md rounded-3xl border border-black/20">
+            {/* <span className="bg-white rounded-3xl p-[5px] pr-[5px] pl-[5px] " >Mohammed</span> */}
+            <ul className="hidden md:flex gap-10 text-black font-medium">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className=" bg-gradient-to-b from-white from-40% to-sky-500 bg-clip-text text-transparent font-bold relative cursor-pointer group"
+                >
+                  {link.label}
+                  {/* Hover underline animation */}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </ul>
+          </div>
 
-                {/* Hover underline animation */}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </ul>
+          <div>
+            <button className=" bg-gray-100/30 backdrop-blur-md w-[50px] h-[50px] border border-black/20 rounded-full ">
+              <DarkModeIcon />
+            </button>
+          </div>
 
           {/* //////////////////////////////////////////////////:::: 
           // 
@@ -101,6 +105,6 @@ export default function NavBar() {
         
         /////////////////////////////////// */}
       </div>
-    </div>
+    </nav>
   );
 }

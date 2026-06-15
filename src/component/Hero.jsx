@@ -1,46 +1,31 @@
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-
+// import Avatar from "@mui/material/Avatar";
+// import Stack from "@mui/material/Stack";
+// import Typography from "@mui/material/Typography";
+import Social from "./Social";
 
 export default function Hero() {
   return (
     <section
       id="Home"
-      className=" bg-black min-h-screen flex bg-[linear-gradient(to_right,#80808012_3px,transparent_2px),linear-gradient(to_bottom,#80808012_3px,transparent_1px)] bg-size-[40px_50px]  items-center justify-center px-6 py-20"
+      className="flex bg-linear-to-b from-[#004D61] to-black min-h-screen 
+      items-center justify-center  "
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="mb-6">
-          <div className="w-32 h-32 from-primary to-muted rounded-full mx-auto mb-6 flex items-center justify-center">
-            <Stack>
-              <Avatar sx={{ width: 110, height: 110 }}>
-                <Typography variant="h3">M</Typography>
-              </Avatar>
-            </Stack>
-          </div>
+      <div className=" flex items-center justify-center flex-col w-[90vw]">
+        <div className="flex items-center flex-col m-[50px] p-[10px]  ">
+          <h1 className=" mb-[25px] bg-gradient-to-b from-white to-[#93f7fa] bg-clip-text text-transparent  font-bold text-7xl z-50">
+            MOUFFOK Mohammed
+          </h1>
+
+          <p className="z-50 text-md text-center w-lg flex-wrap bg-gradient-to-b from-white to-[#A8DADC] bg-clip-text text-transparent ">
+            junior web developer and ict student at{" "}
+            <a href="https://www.ensttic.dz" target="_blank" className="font-bold text-indigo-400 hover:underline underline-offset-2">
+              ENSTTIC
+            </a>{" "}
+            passonate about building scalable website
+          </p>
         </div>
-        <h1 className="mb-4 text-2xl text-black font-bold">John Doe</h1>
-        <p className="text-2xl text-[#505050] mb-8">
-          Full Stack Developer & Designer
-        </p>
-        <p className="text-lg text-[#757575] mb-12 max-w-2xl mx-auto">
-          I craft beautiful, functional web experiences with a focus on clean
-          code and intuitive design. Passionate about creating solutions that
-          make a difference.
-        </p>
-        <div className="flex gap-4 justify-center flex-wrap">
-          <a
-            href="#Projects"
-            className="px-8 py-3 bg-black text-white rounded-lg hover:opacity-75 transition-opacity"
-          >
-            View My Work
-          </a>
-          <a
-            href="#Contact"
-            className="px-8 py-3 border border-[#dadada] rounded-lg hover:bg-[#dadada]  transition-colors"
-          >
-            Get In Touch
-          </a>
+        <div>
+          <Social />
         </div>
       </div>
     </section>

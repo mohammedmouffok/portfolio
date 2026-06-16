@@ -1,7 +1,9 @@
 
+import { useNavigate } from "react-router";
 
 
 export default function About() {
+  const navigate = useNavigate()
 
   return (
     <section id="About" className="py-20 px-6 bg-black  ">
@@ -29,15 +31,20 @@ export default function About() {
             </div>
           </div>
           <div className="flex gap-4 flex-wrap justify-center mt-1.5">
-            <span data-aos="fade-right" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 hover:-translate-y-2 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
+            <span data-aos="fade-right" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
               Problem Solver
             </span>
-            <span data-aos="fade-up" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 hover:-translate-y-2 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
+            <span data-aos="fade-up" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
               Team Player
             </span>
-            <span data-aos="fade-left" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 hover:-translate-y-2 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
+            <span data-aos="fade-left" className="px-4 py-2 bg-[#212121] text-white hover:shadow-md shadow-sky-300 outline-2 outline-offset-2 outline-[#212121] rounded-lg">
               Quick Learner
             </span>
+          </div>
+          <div className='flex items-center justify-center w-full h-6'>
+            <button className='text-white font-bold ' onClick={() => {
+              navigate("/Projects");
+            }} >click me</button>
           </div>
         </div>
       </div>

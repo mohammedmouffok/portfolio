@@ -1,4 +1,4 @@
-import MatrialCards from "./MatrialCards";
+import MatrialCards from "../StyledComponents/MatrialCards";
 
 export default function Skills() {
   return (

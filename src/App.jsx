@@ -2,15 +2,13 @@ import "./App.css";
 import { useEffect } from "react";
 import 'aos/dist/aos.css'
 import AOS from 'aos'
-import NavBar from "./component/NavBar";
-// import Footer from "./component/Footer";
-import About from "./component/About";
-import Projects from "./component/Projects";
-import Skills from "./component/Skills";
-// import Contact from "./component/Contact"
-import Hero from "./component/Hero";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter, Routes, Route } from "react-router";
+
+
+import Main from './component/use/Main'
+import Projects from './component/use/Projects'
 
 const theme = createTheme({
   typography: {
@@ -18,24 +16,29 @@ const theme = createTheme({
   },
 });
 
+function Portfolio() {
+  return (
+    <BrowserRouter basename="/portfolio" >
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/Projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
 ///////////////////////////////////////::
 
 function App() {
-    useEffect(() => {
-      // Initialize AOS
-      AOS.init();
-    }, []);
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init();
+  }, []);
   return (
-    <div className="items-center">
+    <div className="items-center scroll-smooth">
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <NavBar />
-        <Hero />
-        <Skills /> 
-        <About />
-        <Projects />
-        {/* <Contact/> */}
-        {/* <Footer /> */}
+        <Portfolio />
       </ThemeProvider>
     </div>
   );

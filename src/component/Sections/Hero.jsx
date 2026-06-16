@@ -1,7 +1,7 @@
 // import Avatar from "@mui/material/Avatar";
 // import Stack from "@mui/material/Stack";
 // import Typography from "@mui/material/Typography";
-import Social from "./Social";
+import Social from "../StyledComponents/Social";
 
 export default function Hero() {
   return (
